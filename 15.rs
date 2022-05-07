@@ -11,7 +11,7 @@
 
 use std::collections::HashSet;
 use pixels::{Pixels, SurfaceTexture};
-use winit::dpi::LogicalSize;
+use winit::dpi::{LogicalSize, LogicalPosition};
 use winit::event::{Event, VirtualKeyCode};
 use winit::event_loop::{ControlFlow, EventLoop};
 use winit::window::WindowBuilder;
@@ -138,6 +138,7 @@ fn main() {
             .with_title("Hello Pixels")
             .with_inner_size(size)
             .with_min_inner_size(size)
+            .with_position(LogicalPosition::new(100.0, 100.0))
             .build(&event_loop)
             .unwrap()
     };
